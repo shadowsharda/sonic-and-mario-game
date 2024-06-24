@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://start-assets/icon.png" type="Texture2D" id=1]
+
+[node name="resumebuton" type="Button"]
+offset_top = 165.0
+offset_right = 346.0
+offset_bottom = 232.0
+text = "Resume"
+icon = ExtResource( 1 )

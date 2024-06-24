@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/user interface/QuitButton.gd" type="Script" id=1]
+[ext_resource path="res://src/user interface/PlayButton.gd" type="Script" id=2]
+[ext_resource path="res://start-assets/background.png" type="Texture2D" id=3]
+[ext_resource path="res://start-assets/bumper.png" type="Texture2D" id=4]
+[ext_resource path="res://start-assets/coin.png" type="Texture2D" id=5]
+[ext_resource path="res://src/user interface/QuitButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/user interface/PlayButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/user interface/title.tscn" type="PackedScene" id=8]
+[ext_resource path="res://start-assets/uitheme.tres" type="Theme" id=9]
+
+[node name="endscreen" type="Control"]
+anchor_right = 1.024
+anchor_bottom = 1.04
+offset_left = 5.0
+offset_top = -2.0
+offset_right = -30.576
+offset_bottom = 17.9999
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" parent="." instance=ExtResource( 8 )]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.5
+offset_top = 0.0
+offset_right = 180.5
+offset_bottom = 117.0
+theme = ExtResource( 9 )
+text = "congratulation, You have finished
+the game."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -131.0
+offset_right = 233.0
+offset_bottom = 131.0
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" instance=ExtResource( 7 )]
+offset_right = 466.0
+offset_bottom = 129.0
+size_flags_vertical = 3
+text = "start"
+icon = ExtResource( 4 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene_path = "res://src/leveltemplate.tscn"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" instance=ExtResource( 6 )]
+offset_top = 133.0
+offset_right = 466.0
+offset_bottom = 262.0
+size_flags_vertical = 3
+text = "quit"
+icon = ExtResource( 5 )
+expand_icon = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -28.5
+offset_right = 1013.0
+offset_bottom = 28.5
+theme = ExtResource( 9 )
+text = "your score is : %s
+you died times : %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_PlayButton_button_up"]
+[connection signal="button_up" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_button_up"]

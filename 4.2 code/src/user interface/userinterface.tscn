@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://start-assets/uitheme.tres" type="Theme" id=1]
+[ext_resource path="res://src/user interface/QuitButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/user interface/PlayButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/user interface/userinterface.gd" type="Script" id=4]
+[ext_resource path="res://src/user interface/retrybutton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://start-assets/icon.png" type="Texture2D" id=6]
+
+[node name="userinterface" type="Control"]
+process_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 16.0
+offset_bottom = 21.0
+theme = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scoreLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -351.0
+offset_bottom = 79.0
+text = "score:  %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -2.0
+offset_right = -18.0
+offset_bottom = -2.0
+color = Color( 0, 0, 0, 0.160784 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -148.0
+offset_right = 156.0
+offset_bottom = -95.0
+text = "paused"
+align = 1
+
+[node name="pausevboxcontainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -74.0
+offset_right = 168.0
+offset_bottom = 158.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="ColorRect/pausevboxcontainer" instance=ExtResource( 3 )]
+offset_right = 346.0
+offset_bottom = 51.0
+text = "mainscreen"
+next_scene_path = "res://src/user interface/mainscreen.tscn"
+
+[node name="QuitButton" parent="ColorRect/pausevboxcontainer" instance=ExtResource( 2 )]
+offset_top = 55.0
+offset_right = 346.0
+offset_bottom = 106.0
+
+[node name="retrybutton" parent="ColorRect/pausevboxcontainer" instance=ExtResource( 5 )]
+offset_top = 110.0
+offset_right = 346.0
+offset_bottom = 161.0
+
+[node name="resumebuton" type="Button" parent="ColorRect/pausevboxcontainer"]
+offset_top = 165.0
+offset_right = 346.0
+offset_bottom = 232.0
+text = "Resume"
+icon = ExtResource( 6 )
+
+[connection signal="button_up" from="ColorRect/pausevboxcontainer/resumebuton" to="." method="_on_resumebuton_button_up"]

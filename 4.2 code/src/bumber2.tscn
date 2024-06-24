@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 73, 62.5 )
+
+[node name="bumber2" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 9
+mass = 0.00102041
+gravity_scale = 0.0
+sleeping = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 35, 4.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( 25.5, 3.00001 )
+scale = Vector2( 0.314453, 0.285156 )

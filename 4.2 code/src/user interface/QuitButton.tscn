@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://start-assets/coin.png" type="Texture2D" id=1]
+[ext_resource path="res://src/user interface/QuitButton.gd" type="Script" id=2]
+
+[node name="QuitButton" type="Button"]
+offset_top = 133.0
+offset_right = 466.0
+offset_bottom = 262.0
+size_flags_vertical = 3
+text = "quit"
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

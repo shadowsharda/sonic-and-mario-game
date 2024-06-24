@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://6p5fteecxuv7"]
+
+[ext_resource type="PackedScene" path="res://src/user interface/title.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://src/user interface/QuitButton.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://cgw0w15k8r47r" path="res://start-assets/background.png" id="3"]
+[ext_resource type="PackedScene" path="res://src/user interface/PlayButton.tscn" id="4"]
+[ext_resource type="Theme" path="res://start-assets/uitheme.tres" id="5"]
+
+[node name="mainscreencontrol" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 6.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 2
+flip_v = true
+
+[node name="Label" parent="." instance=ExtResource("1")]
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 0.0
+offset_right = 170.0
+offset_bottom = 117.0
+clip_text = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -131.0
+offset_right = 233.0
+offset_bottom = 131.0
+size_flags_vertical = 3
+
+[node name="PlayButton" parent="VBoxContainer" instance=ExtResource("4")]
+layout_mode = 2
+
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource("2")]
+layout_mode = 2

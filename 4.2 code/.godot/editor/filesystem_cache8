@@ -1,0 +1,55 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1719210070
+export_presets.cfg::TextFile::-1::1708233135::0::1::::<><>::
+icon.png::CompressedTexture2D::1634290474495677860::1708233135::1708233135::1::::<><>::
+player1.png::CompressedTexture2D::8506466937456510258::1708233135::1708233135::1::::<><>::
+::res://src/::1719209460
+bumber2.tscn::PackedScene::-1::1708233135::0::1::::<><>::
+bumper.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/bumper.png
+level2.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://src/actors/player.tscn<>res://start-assets/tileset.png<>res://src/actors/enemy.tscn<>res://src/bumper.tscn<>res://src/bumber2.tscn<>res://start-assets/background.png<>res://src/object/coin.tscn<>res://src/object/Portal2D.tscn<>res://src/user interface/userinterface.tscn
+leveltemplate.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://src/actors/player.tscn<>res://start-assets/tileset.png<>res://src/actors/enemy.tscn<>res://src/bumper.tscn<>res://src/user interface/userinterface.tscn<>res://start-assets/background.png<>res://src/object/coin.tscn<>res://src/object/Portal2D.tscn<>res://src/level2.tscn
+::res://src/actors/::1719210049
+actor.gd::GDScript::-1::1708233135::0::1::::actor<>CharacterBody2D<>::
+enemy.gd::GDScript::-1::1708233135::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::1448717566651227520::1708233135::0::1::::<><>::uid://vmod2c76kehb::::res://start-assets/enemy.png<>res://src/actors/enemy.gd
+player.gd::GDScript::-1::1719210049::0::1::::<>actor<>::
+player.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/player.png<>res://src/actors/player.gd
+::res://src/autoload/::1719209460
+playerdata.gd::GDScript::-1::1708233135::0::1::::<>Node<>::
+playerdata.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://src/autoload/playerdata.gd
+::res://src/object/::1719209460
+coin.gd::GDScript::-1::1708233135::0::1::::<>Area2D<>::
+coin.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/coin.png<>res://src/object/coin.gd
+Portal2D.gd::GDScript::-1::1708233135::0::1::::<>Area2D<>::
+Portal2D.tscn::PackedScene::4112992310731460898::1708233135::0::1::::<><>::uid://c4h8rdk5tcudo::::res://start-assets/portal.png<>res://src/object/Portal2D.gd<>res://src/user interface/endscreenui.tscn
+::res://src/user interface/::1719210067
+endscreenui.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://src/user interface/QuitButton.gd<>res://src/user interface/PlayButton.gd<>res://start-assets/background.png<>res://start-assets/bumper.png<>res://start-assets/coin.png<>res://src/user interface/QuitButton.tscn<>res://src/user interface/PlayButton.tscn<>res://src/user interface/title.tscn<>res://start-assets/uitheme.tres
+mainscreen.tscn::PackedScene::2208651262150631570::1719210067::0::1::::<><>::res://src/user interface/title.tscn<>res://src/user interface/QuitButton.tscn<>uid://cgw0w15k8r47r::::res://start-assets/background.png<>res://src/user interface/PlayButton.tscn<>res://start-assets/uitheme.tres
+Manjari-Regular.otf::FontFile::7316602578462053817::1708233135::1708233135::1::::<><>::
+PlayButton.gd::GDScript::-1::1708233135::0::1::::<>Button<>::
+PlayButton.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/bumper.png<>res://src/user interface/PlayButton.gd
+QuitButton.gd::GDScript::-1::1708233135::0::1::::<>Button<>::
+QuitButton.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/coin.png<>res://src/user interface/QuitButton.gd
+resumebuton.gd::GDScript::-1::1708233135::0::1::::<>Button<>::
+resumebuton.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/icon.png
+retrybutton.gd::GDScript::-1::1708233135::0::1::::<>Button<>::
+retrybutton.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://player1.png<>res://src/user interface/retrybutton.gd
+title.tscn::PackedScene::-1::1708233135::0::1::::<><>::
+userinterface.gd::GDScript::-1::1708233135::0::1::::<>Control<>::
+userinterface.tscn::PackedScene::-1::1708233135::0::1::::<><>::res://start-assets/uitheme.tres<>res://src/user interface/QuitButton.tscn<>res://src/user interface/PlayButton.tscn<>res://src/user interface/userinterface.gd<>res://src/user interface/retrybutton.tscn<>res://start-assets/icon.png
+::res://start-assets/::1719209460
+background.png::CompressedTexture2D::5240949364539173149::1708233135::1708233135::1::::<><>::
+bumper.png::CompressedTexture2D::1840336731065432130::1708233135::1708233135::1::::<><>::
+coin.png::CompressedTexture2D::7925475318504942913::1708233135::1708233135::1::::<><>::
+enemy.png::CompressedTexture2D::1499595067443663167::1708233135::1708233135::1::::<><>::
+font_default.tres::FontFile::-1::1708233135::0::1::::<><>::res://assets/montserrat_extrabold.otf
+font_title.tres::FontFile::-1::1708233135::0::1::::<><>::res://assets/montserrat_extrabold.otf
+icon.png::CompressedTexture2D::6581615251863512705::1708233135::1708233135::1::::<><>::
+light.png::CompressedTexture2D::1246644264087157390::1708233135::1708233135::1::::<><>::
+montserrat_extrabold.otf::FontFile::6713729857903164919::1708233135::1708233135::1::::<><>::
+new_dynamicfont.tres::FontFile::-1::1708233135::0::1::::<><>::res://src/user interface/Manjari-Regular.otf
+player.png::CompressedTexture2D::3118416364976854044::1708233135::1708233135::1::::<><>::
+portal.png::CompressedTexture2D::6824802670831885764::1708233135::1708233135::1::::<><>::
+tileset.png::CompressedTexture2D::3715707379620697856::1708233135::1708233135::1::::<><>::
+tileset.tres::TileSet::-1::1708233135::0::1::::<><>::res://assets/tileset.png
+uitheme.tres::Theme::-1::1708233135::0::1::::<><>::res://start-assets/new_dynamicfont.tres

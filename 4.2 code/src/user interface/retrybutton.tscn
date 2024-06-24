@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://player1.png" type="Texture2D" id=1]
+[ext_resource path="res://src/user interface/retrybutton.gd" type="Script" id=2]
+
+[node name="retrybutton" type="Button"]
+offset_right = 466.0
+offset_bottom = 129.0
+size_flags_vertical = 3
+text = "retry"
+icon = ExtResource( 1 )
+expand_icon = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="." to="." method="_on_retrybutton_button_up"]
